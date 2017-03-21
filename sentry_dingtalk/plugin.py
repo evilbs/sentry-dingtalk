@@ -48,7 +48,7 @@ class WebHooksOptionsForm(notify.NotificationConfigurationForm):
         return validate_urls(value)
 
 
-class WebHooksPlugin(notify.NotificationPlugin):
+class DingtalkPlugin(notify.NotificationPlugin):
     author = 'Sentry Team'
     author_url = 'https://github.com/getsentry/sentry'
     version = sentry.VERSION
