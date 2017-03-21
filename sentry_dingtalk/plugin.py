@@ -52,10 +52,10 @@ class WebHooksOptionsForm(notify.NotificationConfigurationForm):
 
 
 class DingtalkPlugin(notify.NotificationPlugin):
-    author = 'Sentry Team'
-    author_url = 'https://github.com/getsentry/sentry'
+    author = 'NewBee Team'
+    author_url = 'https://github.com/gzhappysky/sentry-dingtalk'
     version = sentry.VERSION
-    description = "Integrates web hooks."
+    description = "Integrates dingtalk robot."
     resource_links = [
         ('Bug Tracker', 'https://github.com/getsentry/sentry/issues'),
         ('Source', 'https://github.com/getsentry/sentry'),
