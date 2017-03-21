@@ -8,6 +8,9 @@ sentry_dingtalk.models
 
 from __future__ import absolute_import
 
+import time
+import json
+import requests
 import logging
 import six
 import sentry
@@ -38,10 +41,10 @@ def validate_urls(value, **kwargs):
 
 class WebHooksOptionsForm(notify.NotificationConfigurationForm):
     urls = forms.CharField(
-        label=_('Callback URLs'),
+        label=_('Dingtalk robot url'),
         widget=forms.Textarea(attrs={
             'class': 'span6', 'placeholder': 'https://sentry.io/callback/url'}),
-        help_text=_('Enter callback URLs to POST new events to (one per line).'))
+        help_text=_('Enter dingtalk robot url.'))
 
     def clean_url(self):
         value = self.cleaned_data.get('url')
@@ -112,9 +115,14 @@ class DingtalkPlugin(notify.NotificationPlugin):
         )
 
     def notify_users(self, group, event, fail_silently=False):
-        payload = self.get_group_data(group, event)
-        for url in self.get_webhook_urls(group.project):
-            safe_execute(self.send_webhook, url, payload, _with_transaction=False)
+        url = "https://oapi.dingtalk.com/robot/send?access_token=9bacf9b193fe44607b52486590727a4702ec87c5adbc5854d73f747b393528b1"
+        data = {"msgtype": "text", 
+                    "text": {
+                        "content": 'message'
+                    }
+                }
+        headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+        r = requests.post(url, data=json.dumps(data), headers=headers)
 
 
 
