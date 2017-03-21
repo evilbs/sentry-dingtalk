@@ -64,4 +64,4 @@ class DingtalkPlugin(notify.NotificationPlugin):
         r = requests.post(url, data=json.dumps(data), headers=headers)
         
 
-register(DingtalkPlugin)
+# register(DingtalkPlugin)
