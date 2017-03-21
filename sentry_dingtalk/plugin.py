@@ -17,6 +17,7 @@ from sentry.exceptions import PluginError
 from sentry.plugins.bases import notify
 from sentry.http import is_valid_url, safe_urlopen
 from sentry.utils.safe import safe_execute
+from sentry.plugins import register
 
 # import sentry_whatsapp 
         
@@ -61,4 +62,6 @@ class DingtalkPlugin(notify.NotificationPlugin):
                 }
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         r = requests.post(url, data=json.dumps(data), headers=headers)
-         
+        
+
+register(DingtalkPlugin)
