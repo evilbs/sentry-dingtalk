@@ -58,10 +58,10 @@ class DingtalkPlugin(notify.NotificationPlugin):
         ('Source', 'https://github.com/getsentry/sentry'),
     ]
 
-    slug = 'webhooks'
-    title = 'WebHooks'
+    slug = 'dingtalk'
+    title = 'dingtalk'
     conf_title = title
-    conf_key = 'webhooks'
+    conf_key = 'dingtalk'
     # TODO(dcramer): remove when this is migrated to React
     project_conf_form = WebHooksOptionsForm
     timeout = getattr(settings, 'SENTRY_WEBHOOK_TIMEOUT', 3)
