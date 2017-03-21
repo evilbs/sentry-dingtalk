@@ -41,7 +41,7 @@ setup(
     test_suite='nose.collector',
     entry_points={
         'sentry.plugins': [
-            'dingtalk = sentry_dingtalk.plugin:DingtalkPlugin'
+            'dingtalk = sentry_dingtalk.plugin:WebHooksPlugin'
         ],
     },
     include_package_data=True,
