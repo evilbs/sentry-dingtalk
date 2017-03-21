@@ -30,7 +30,7 @@ setup(
     author='guoyong yi',
     author_email='guoyongyi11@gmail.com',
     url='https://github.com/gzhappysky/sentry-dingtalk',
-    description='A Sentry extension which integrates with Dinttalk robot',
+    description='A Sentry extension which integrates with Dinttalk robot.',
     long_description=__doc__,
     license='BSD',
     packages=find_packages(exclude=['tests']),
