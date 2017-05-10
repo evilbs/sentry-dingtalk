@@ -26,7 +26,7 @@ install_requires = [
 
 setup(
     name='sentry-dingtalk',
-    version='1.1.2',
+    version='1.1.3',
     author='guoyong yi',
     author_email='guoyongyi11@gmail.com',
     url='https://github.com/gzhappysky/sentry-dingtalk',
