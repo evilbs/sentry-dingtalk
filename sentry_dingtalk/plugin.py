@@ -2,7 +2,7 @@
 sentry_dingtalk.models
 ~~~~~~~~~~~~~~~~~~~~~
 
-:copyright: (c) 2017 by Guoyong YI, see AUTHORS for more details.
+:copyright: (c) 2017 by Guoyong yi, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
 """
 
